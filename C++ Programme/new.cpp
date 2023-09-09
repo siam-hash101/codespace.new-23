@@ -4,15 +4,17 @@ using namespace std;
 
 int main(void) {
 
-    int a,b;
+    int a;
 
     cout<<"enter a: ";
     cin>>a;
 
-    cout<<"enter b: ";
-    cin>>b;
-
-    cout<<"sum is: "<<a+b<<endl;
+    if(a%2==0 && a%3==0) {
+        cout<<"done\n";
+    }
+    else{
+        cout<<"wrong\n";
+    }
 
     return 0;
 }
