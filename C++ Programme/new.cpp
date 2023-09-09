@@ -4,7 +4,7 @@ using namespace std;
 
 int main(void) {
 
-    int a;
+    int a,b;
 
     cout<<"enter a: ";
     cin>>a;
@@ -13,8 +13,13 @@ int main(void) {
         cout<<"done\n";
     }
     else{
-        cout<<"wrong\n";
+        cout<<"wrong\n"; 
     }
+
+    char ch='a';
+    cout<<int(ch)<<endl;
+
+    cout<<&a<<endl;
 
     return 0;
 }
