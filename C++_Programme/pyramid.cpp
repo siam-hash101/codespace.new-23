@@ -11,7 +11,7 @@ int main() {
 
     for(int i=height ; i>=1 ; i--) {
         for(int j=1 ; j<=i ; j++) {
-            cout<<"*";
+            cout<<"* ";
         }
         cout<<endl;
     }
