@@ -4,22 +4,22 @@ using namespace std;
 
 int main(void) {
 
-    int a,b;
+    int rows,cols;
 
-    cout<<"enter a: ";
-    cin>>a;
 
-    if(a%2==0 && a%3==0) {
-        cout<<"done\n";
+    cout<<"enter row: ";
+    cin>>rows;
+
+    cout<<"enter column: ";
+    cin>>cols;
+
+    for(int i=0 ; i<rows ; i++) {
+        for(int j=0 ; j<cols ; j++) {
+            cout<<"*";
+        }
+        cout<<endl;
     }
-    else{
-        cout<<"wrong\n"; 
-    }
-
-    char ch='a';
-    cout<<int(ch)<<endl;
-
-    cout<<&a<<endl;
+    cout<<"\n";
 
     return 0;
 }
