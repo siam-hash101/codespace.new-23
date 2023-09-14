@@ -50,12 +50,27 @@ int main() {
         cout<<endl;
         
     }
-    
+
+    cout<<endl;
+
+// inverted floyed's pattern 
+
     int count=1;
     for(int i=height ; i>=1 ; i--) {
         for(int j=1 ; j<=i ; j++) {
             cout<<count<<" ";
             count++;
+        }
+        cout<<endl;
+    }
+
+    cout<<endl;
+
+// inverted number pattern
+
+    for(int i=1 ; i<=height ; i++) {
+        for(int j=1 ; j<=height+1-i ; j++) {
+            cout<<j<<" ";
         }
         cout<<endl;
     }
