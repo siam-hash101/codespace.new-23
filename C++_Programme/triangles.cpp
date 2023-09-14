@@ -15,17 +15,17 @@ int main() {
     cout<<"enter height: ";
     cin>>height;
 
-    int count=1;
+    //int count=1;
 
-    for(int i=1 ; i<=rows ; i++) {
-        for(int j=1 ; j<=cols ; j++) {
-        cout<<"| "<<count<<" |";
-        count++;
-        }
-        cout<<endl;
-    }
+    //for(int i=1 ; i<=rows ; i++) {
+    //    for(int j=1 ; j<=cols ; j++) {
+    //    cout<<"| "<<count<<" |";
+    //    count++;
+    //    }
+    //    cout<<endl;
+    //}
 
-    cout<<endl;
+    //cout<<endl;
 
     for(int i=1 ; i<=rows ; i++) {
         for(int j=1 ; j<=cols ; j++) {
@@ -51,6 +51,14 @@ int main() {
         
     }
     
+    int count=1;
+    for(int i=height ; i>=1 ; i--) {
+        for(int j=1 ; j<=i ; j++) {
+            cout<<count<<" ";
+            count++;
+        }
+        cout<<endl;
+    }
 
     return 0;
 }
