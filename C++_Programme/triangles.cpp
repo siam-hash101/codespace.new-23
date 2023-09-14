@@ -36,6 +36,8 @@ int main() {
 
     cout<<endl;
 
+// triangle pattern
+
     for(int i=1 ; i<=height ; i++) {
         int space=height - i;
         for(int j=1 ; j<=space ; j++) {
