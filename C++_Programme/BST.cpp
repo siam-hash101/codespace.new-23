@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 // Define the structure for a tree node
 struct Node {
@@ -77,7 +78,7 @@ private:
     void inorderTraversal(Node* root) {
         if (root != nullptr) {
             inorderTraversal(root->left);
-            std::cout << root->data << " ";
+            cout<<root->data << " ";
             inorderTraversal(root->right);
         }
     }
@@ -100,7 +101,7 @@ public:
 
     void inorderTraversal() {
         inorderTraversal(root);
-        std::cout << std::endl;
+        cout<<endl;
     }
 };
 
@@ -113,20 +114,29 @@ int main() {
     bst.insert(40);
     bst.insert(60);
     bst.insert(80);
+    bst.insert(85);
+    bst.insert(95);
+    bst.insert(100);
 
-    std::cout << "Inorder traversal of the BST: ";
+    cout << "Inorder traversal of the BST: ";
     bst.inorderTraversal();
 
-    int value_to_search = 30;
+    int value_to_search;
+    cout<<"Which value you want to search? ";
+    cin>>value_to_search;
+
     if (bst.search(value_to_search)) {
-        std::cout << value_to_search << " is in the BST." << std::endl;
+        cout << value_to_search << " is in the BST." << std::endl;
     } else {
-        std::cout << value_to_search << " is not in the BST." << std::endl;
+        cout << value_to_search << " is not in the BST." << std::endl;
     }
 
-    int value_to_remove = 30;
+    
+    int value_to_remove;
+    cout<<"Which value you nant to remove in the BST? ";
+    cin>>value_to_remove;
     bst.remove(value_to_remove);
-    std::cout << "Inorder traversal after removing " << value_to_remove << ": ";
+    cout << "Inorder traversal after removing " << value_to_remove << ": ";
     bst.inorderTraversal();
 
     return 0;
