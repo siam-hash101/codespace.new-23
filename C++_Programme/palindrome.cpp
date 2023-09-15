@@ -6,6 +6,8 @@ using namespace std;
 
 int main() {
 
+    cout<<"||PALINDROMIC TRIANGLE||"<<endl;
+
     int n;
     cout<<"enter n: ";
     cin>>n;
