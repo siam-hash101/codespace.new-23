@@ -40,9 +40,10 @@ int main() {
 
     for(int i=a ; i<=b ; i++) {
         if(isPrime(i)) {
-            cout<<i<<endl;
+            cout<<i<<"\t";
         }
     }
+    cout<<endl;
 
     return 0;
 }
