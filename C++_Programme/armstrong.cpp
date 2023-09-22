@@ -1,5 +1,4 @@
-// Armstrong number is a number where the sumation of each digit's cube
-// is equal to that initial number  
+// programme to find whether a three digit number is an armstrong number or not.. 
 
 #include<iostream>
 #include<cmath>
@@ -17,12 +16,17 @@ int main() {
         int lastDigit=n%10;
         sum+=pow(lastDigit,3);
         n=n/10;
+
     }
     if(sum==originalN) {
         cout<<"Armstrong Number"<<endl;
-    }else{
-        cout<<"Not Armstrong"<<endl;
+    }
+    else {
+        cout<<"Not Armstrong Number"<<endl;
+    }
+    
+
+        return 0;
     }    
 
-    return 0;
-}
+    
