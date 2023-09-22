@@ -1,32 +1,43 @@
-// programme to find whether a three digit number is an armstrong number or not.. 
-
 #include<iostream>
 #include<cmath>
 using namespace std;
 
-int main() {
+int countDigit(int num) {
+    int count=0;
+    while(num>0) {
+        num/=10;
+        count++;
+    }
+    return count;
+}
 
-    int n;
-    cout<<"enter number: ";
-    cin>>n;
+bool isArmstrong(int num) {
+    int originalNum=num;
     int sum=0;
-    int originalN=n;
+    int numOfDigit=countDigit(num);
 
-    while(n>0) {
-        int lastDigit=n%10;
-        sum+=pow(lastDigit,3);
-        n=n/10;
+    while(num>0) {
+        int lastDigit=num%10;
+        sum+=pow(lastDigit,numOfDigit);
+        num=num/10;
+    }
+    return sum==originalNum;
+}
+
+int main() {
+    int lowerlimit,upperlimit;
+    cout<<"Set the lower limit: ";
+    cin>>lowerlimit;
+    cout<<"Set the upper limit: ";
+    cin>>upperlimit;
+
+    cout<<"Armstrong number between "<<lowerlimit<<" and "<<upperlimit<<" is: ";
+
+    for(int i=lowerlimit ; i<=upperlimit ; i++) {
+        if(isArmstrong(i)) {
+            cout<<i<<" ";
+        }
 
     }
-    if(sum==originalN) {
-        cout<<"Armstrong Number"<<endl;
-    }
-    else {
-        cout<<"Not Armstrong Number"<<endl;
-    }
-    
-
-        return 0;
-    }    
-
-    
+    cout<<endl;
+}
