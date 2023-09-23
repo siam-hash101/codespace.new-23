@@ -8,7 +8,7 @@ int sum(int n) {
     }
     return result;
 }
-int main() {
+int32_t main() {
     int n;
     cout<<"enter n: ";
     cin>>n;
